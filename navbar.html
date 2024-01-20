@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <!-- <link rel="stylesheet" href="navbar.css"> -->
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    background-color: grey;
+}
+
+.navbar {
+    /* height: 15vh; */
+    /* width: 100%; */
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+    /* color: aliceblue; */
+    transition: background-color 3s;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar::after{
+    content: "hello";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+
+}
+
+.navbar div {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.navbar:hover::after{
+    transform: scaleY(1);
+}
+
+.home, .work, .contact-us,.about-us{
+    cursor: pointer;
+}
+.navbar:hover{
+    color: rgb(0, 145, 255);
+}
+
+</style>
+</head>
+<body>
+   <nav class="navbar">
+    <div class="Home">Home</div>
+    <div class="Work">Work</div>
+    <div class="About-us">About-us</div>
+    <div class="Contact-us">Contact-us</div>
+   </nav> 
+</body>
+</html>
